@@ -1,3 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+<dimen name="fab_margin">16dp</dimen>
+<dimen name="textSize_default">20sp</dimen>
+
+<dimen name="padding_login">50dp</dimen>
+<dimen name="padding_default">16dp</dimen>
+<dimen name="login_button">20sp</dimen>
+<dimen name="login_text">20sp</dimen>
+<!-- Default screen margins, per the Android Design guidelines. -->
+<dimen name="activity_horizontal_margin">16dp</dimen>
+<dimen name="activity_vertical_margin">16dp</dimen>
+<dimen name="login_logo">70dp</dimen>
+<dimen name="marginDialog">50dp</dimen>
+<dimen name="margin_default">16dp</dimen>
+<dimen name="textDialogM">20sp</dimen>
+<dimen name="height_tags">50dp</dimen>
+<dimen name="height_container_tags">30dp</dimen>
+<dimen name="width_imagentoolbar">150dp</dimen>
+<dimen name="height_imagentoolbar">37dp</dimen>
+<dimen name="margin_leftless_toolbar">-20dp</dimen>
+
+<dimen name="width_logo_login">100dp</dimen>
+<dimen name="height_logo_login">25dp</dimen>
+
+<!-- Slider News Trendings -->
+<dimen name="slider_textTitle">30sp</dimen>
+<dimen name="slider_marginleft_title">30dp</dimen>
+<dimen name="height_arrow_slider">30dp</dimen>
+<dimen name="width_arrow_slider">10dp</dimen>
+<dimen name="margin_arrows_slide">5dp</dimen>
+
+<dimen name="margin_cardview">7dp</dimen>
+<dimen name="padding_cardview">5dp</dimen>
+<dimen name="height_cardview">150dp</dimen>
+<dimen name="cardview_size_image">100dp</dimen>
+<dimen name="card_lineseparator">4dp</dimen>
+<dimen name="padding_textCard">10dp</dimen>
+<dimen name="card_image_marginleft">10dp</dimen>
+<dimen name="card_title_textSize">30sp</dimen>
+
+<!--Activity Noticias -->
+<dimen name="noticiatitle_textsize">35sp</dimen>
+<dimen name="noticialead_textsize">25sp</dimen>
+<dimen name="noticia_height_viewpager">200dp</dimen>
+<dimen name="activity_textdescripcion_textsize">20sp</dimen>
+<dimen name="noticia_height_buttonshare">40dp</dimen>
+<dimen name="margin_top_bottom_dialog_places">70dp</dimen>
+
+<dimen name="marker_imagesite_size">80dp</dimen>
+<dimen name="marker_description_size">150dp</dimen>
+<dimen name="marker_margin_info">10dp</dimen>
+<dimen name="height_header_miciudad">30dp</dimen>
+
+<dimen name="profile_icon_tag">25dp</dimen>
+<dimen name="profile_padding">20dp</dimen>
+<dimen name="saveplaces_item_imageview">80dp</dimen>
+<dimen name="saveplaces_item_margintext">10dp</dimen>
+<dimen name="height_app_bar_slider_new">220dp</dimen>
+<dimen name="margin_btn_signin">40dp</dimen>
+<dimen name="icon_expandablelistview">40dp</dimen>
+<dimen name="icon_expandablelistview_margin">5dp</dimen>
+<dimen name="height_peek_bottomsheet">42dp</dimen>
+<dimen name="height_peek_bottomsheet_middle">250dp</dimen>
+
 </resources>
