@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "550040738847",
+    "firebase_url": "https://transporte-30ff6.firebaseio.com",
+    "project_id": "transporte-30ff6",
+    "storage_bucket": "transporte-30ff6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550040738847:android:cbf243f32275e645",
+        "android_client_info": {
+          "package_name": "geeks.mitransporte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550040738847-pig3k8dd2a809qbj9er6pd1it4fmigcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmQCd5yCSr6Aq71wo1-koXfIDgdVuaUwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
