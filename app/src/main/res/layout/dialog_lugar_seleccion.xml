@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCerrarDialoag"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_close_green_24dp"
+        android:textSize="@dimen/size_x" />
+
+    <EditText
+        android:id="@+id/edLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCerrarDialoag"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:hint="¿A dónde vas ?"
+        android:textSize="17sp" />
+
+
+    <ImageView
+        android:id="@+id/ivNearMe"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/edLugar"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_near_me"/>
+
+    <TextView
+        android:id="@+id/tvNearMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivNearMe"
+        android:layout_alignBottom="@+id/ivNearMe"
+        android:layout_alignBaseline="@+id/ivNearMe"
+        android:layout_marginLeft="10dp"
+        android:text="Cerca de mí"
+        android:textSize="15sp"
+        android:textColor="@color/princiaplGreen"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/viewSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whiteTransparent"
+        android:layout_below="@+id/tvNearMe"
+        android:layout_marginTop="10dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvRutas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewSeperator"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical"/>
+
+</RelativeLayout>

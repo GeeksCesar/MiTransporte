@@ -5,6 +5,7 @@
     <dimen name="padding_default">16dp</dimen>
     <dimen name="width_imagentoolbar">150dp</dimen>
     <dimen name="height_imagentoolbar">37dp</dimen>
+    <dimen name="size_x">16sp</dimen>
     <dimen name="margin_leftless_toolbar">-20dp</dimen>
     <dimen name="height_peek_bottomsheet">42dp</dimen>
     <dimen name="margin_default">16dp</dimen>
