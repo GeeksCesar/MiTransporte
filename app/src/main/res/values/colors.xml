@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#009750</color>
     <color name="colorPrimaryDark">#4a824b</color>
-    <color name="colorAccent">#35b785</color>
+    <color name="colorAccent">#4a824b</color>
+    <color name="colorGreenOpacity80">#e26ba06f</color>
 
     <color name="princiaplGreen">#6ba06f</color>
     <color name="principalBlue">#175699</color>
