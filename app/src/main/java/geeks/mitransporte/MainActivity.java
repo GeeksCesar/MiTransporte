@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationViewHelper.disableShiftMode(navigation);
 
         setFragment(0);
+
+
     }
 
 
