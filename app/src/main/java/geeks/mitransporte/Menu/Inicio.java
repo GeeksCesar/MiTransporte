@@ -1,6 +1,7 @@
 package geeks.mitransporte.Menu;
 
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -8,8 +9,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import geeks.mitransporte.R;
 
@@ -21,6 +24,11 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
     RelativeLayout lnBuscarSitios, tvBuscarSitios ;
 
     AppBarLayout barLayout;
+
+    Dialog dialog ;
+    TextView tvCerrarDIalog , tvNearMe ;
+    EditText edLugar ;
+
 
     public Inicio() {
         // Required empty public constructor
@@ -34,17 +42,10 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
 
         initWidget();
 
-        lnBuscarSitios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "LinearLayout", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         tvBuscarSitios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Textview", Toast.LENGTH_SHORT).show();
+              showDialogLugar();
             }
         });
 
@@ -70,5 +71,26 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
         }else {
             lnBuscarSitios.setVisibility(View.GONE);
         }
+    }
+
+    private void showDialogLugar(){
+        dialog = new Dialog(context, R.style.FullScreenDialogStyle);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_lugar_seleccion);
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+
+        tvCerrarDIalog = dialog.findViewById(R.id.tvCerrarDialoag);
+        edLugar = dialog.findViewById(R.id.edLugar);
+        tvNearMe = dialog.findViewById(R.id.tvNearMe);
+
+        tvCerrarDIalog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.hide();
+            }
+        });
+
+        dialog.show();
     }
 }
