@@ -8,20 +8,27 @@
     android:orientation="vertical"
     android:id="@+id/container">
 
-    <FrameLayout
-        android:id="@+id/content"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-    </FrameLayout>
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+    
    <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/principalBlue"
+        app:itemBackground="@color/md_white_1000"
         app:itemIconTint="@color/boton_selector"
         app:itemTextColor="@color/boton_selector"
         app:menu="@menu/navigation_main"
