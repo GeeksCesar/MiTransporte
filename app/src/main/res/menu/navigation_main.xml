@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="geeks.mitransporte.MainActivity">
+
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@drawable/ic_location"
+        android:title="@string/title_inicio" />
+
+    <item
+        android:id="@+id/nav_rutas"
+        android:icon="@drawable/ic_route"
+        android:title="@string/title_ruta" />
+    <item
+        android:id="@+id/nav_pefil"
+        android:icon="@drawable/ic_perfil"
+        android:title="@string/title_perfil" />
+
+</menu>

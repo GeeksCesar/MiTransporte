@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">MiTransporte</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_inicio">Inicio</string>
+    <string name="title_ruta">Rutas</string>
+    <string name="title_perfil">Perfil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
