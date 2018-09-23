@@ -1,0 +1,38 @@
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_marginLeft="@dimen/margin_leftless_toolbar"
+    android:background="#519156"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_person_black_24dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/toolbarText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Perfil"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

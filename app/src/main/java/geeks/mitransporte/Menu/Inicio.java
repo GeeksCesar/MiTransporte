@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import geeks.mitransporte.R;
 
@@ -24,6 +28,7 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
     Context context ;
     RelativeLayout lnBuscarSitios, tvBuscarSitios ;
     RecyclerView reciclerInfoCiudad;
+    RecyclerView.Adapter mAdapter;
 
     AppBarLayout barLayout;
 
@@ -61,10 +66,25 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
 
         lnBuscarSitios = view.findViewById(R.id.lnBuscarSitiosToolbar);
         tvBuscarSitios = view.findViewById(R.id.tvBuscarSitios);
-        reciclerInfoCiudad = view.findViewById(R.id.reciclerInfoCiudad);
         barLayout = view.findViewById(R.id.appBar);
 
+        /* Recicler view**/
+        reciclerInfoCiudad = view.findViewById(R.id.reciclerInfoCiudad);
+        reciclerInfoCiudad.setLayoutManager(new LinearLayoutManager(context));
+        reciclerInfoCiudad.setNestedScrollingEnabled(false);  // Deshabilito el nestedScrollView para que los items se desplacen más rapido
+        mAdapter = new AdapterRecyclerInfoCity(getActivity(), setDataDummyInfoCity());
+        reciclerInfoCiudad.setAdapter(mAdapter);
+
         barLayout.addOnOffsetChangedListener(this);
+    }
+
+    private List<InfoCiudad> setDataDummyInfoCity() {
+        List<InfoCiudad> listInfoCity = new ArrayList<>();
+        listInfoCity.add(new InfoCiudad("Accidente", "Carrera 7", "Se ha presentado un accidente cerca del colegio la presentación, entre un carro y una motocicleta"));
+        listInfoCity.add(new InfoCiudad("Obras", "Usco", "Se está realizando el intercambiador  frente a la Universidad Surcolombiana"));
+        listInfoCity.add(new InfoCiudad("Manifestación", "Parque Santander", "Hay un grupo de personas manifestando frente a la gobernación del huila, tamponando la carrera 4"));
+
+        return listInfoCity;
     }
 
     @Override

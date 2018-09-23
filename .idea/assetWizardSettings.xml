@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -18,11 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-<<<<<<< HEAD
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/AndroidStudio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_close_black_24dp.xml" />
-=======
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/maps/ic_near_me_black_24dp.xml" />
->>>>>>> fdbc8c91bbf5af4e7a3037492d5787eca0e4040f
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/AndroidStudio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -32,15 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-<<<<<<< HEAD
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_close_black_24dp" />
+                            <entry key="outputName" value="ic_person_black_24dp" />
                             <entry key="sourceFile" value="C:\Users\diego" />
-=======
-                            <entry key="color" value="4a824b" />
-                            <entry key="outputName" value="ic_near_me" />
-                            <entry key="sourceFile" value="C:\Users\CesarLiizcano" />
->>>>>>> fdbc8c91bbf5af4e7a3037492d5787eca0e4040f
                           </map>
                         </option>
                       </PersistentState>

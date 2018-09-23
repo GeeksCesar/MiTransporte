@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.google.android.gms.maps.SupportMapFragment;
+
 import geeks.mitransporte.Menu.Inicio;
 import geeks.mitransporte.Menu.Perfil;
 import geeks.mitransporte.Menu.Route;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     Context context;
     BottomNavigationView navigation;
+    SupportMapFragment mapFragment;
     int PERMISSION_ALL = 1;
 
     @Override

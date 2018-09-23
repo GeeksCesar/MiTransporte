@@ -38,7 +38,7 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_collapseMode="pin">
 
-                <!--Buscar Sitios toolbar-->
+                <!--Buscar Sitios toolbar_rutas-->
                 <RelativeLayout
                     android:id="@+id/lnBuscarSitiosToolbar"
                     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 </RelativeLayout>
             </android.support.v7.widget.Toolbar>
 
-            <!--Buscar Sitios toolbar-->
+            <!--Buscar Sitios toolbar_rutas-->
             <RelativeLayout
                 android:id="@+id/tvBuscarSitios"
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <!-- /buscar Sitios toolbar-->
+            <!-- /buscar Sitios toolbar_rutas-->
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -155,16 +155,16 @@
                 </LinearLayout>
                 <!-- /Clima -->
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Tráfico en la Ciudad"
                     android:textAlignment="center"
-                    android:layout_marginBottom="@dimen/margin_default"
+                    android:layout_margin="@dimen/margin_default"
                     android:textSize="20dp"/>
 
                 <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="@dimen/margin_default"
                     android:id="@+id/reciclerInfoCiudad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
