@@ -14,7 +14,7 @@ public class SplashScreen extends AppCompatActivity {
     Thread splash;
     VideoView videoView;
     Intent intent ;
-    private static final String VIDEO_SAMPLE = "video_splash";
+    private static final String VIDEO_SAMPLE = "splash_screen";
 
     Context context ;
 

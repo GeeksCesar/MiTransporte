@@ -3,6 +3,7 @@ package geeks.mitransporte.Menu;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
@@ -28,6 +29,7 @@ import geeks.mitransporte.Api.Service;
 import geeks.mitransporte.Contoller.PlaceListAdapter;
 import geeks.mitransporte.Objeto.Places;
 import geeks.mitransporte.R;
+import geeks.mitransporte.Utils.RecyclerItemClickListener;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -45,7 +47,7 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
     Dialog dialog ;
     TextView tvCerrarDIalog , tvNearMe ;
     EditText edLugar ;
-    RecyclerView rvRutas ;
+    RecyclerView rvPlaces;
     RecyclerView.LayoutManager layoutManager;
 
     ApiService apiService ;
@@ -109,14 +111,14 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
         tvCerrarDIalog = dialog.findViewById(R.id.tvCerrarDialoag);
         edLugar = dialog.findViewById(R.id.edLugar);
         tvNearMe = dialog.findViewById(R.id.tvNearMe);
-        rvRutas = dialog.findViewById(R.id.rvRutas);
+        rvPlaces = dialog.findViewById(R.id.rvRutas);
 
-        rvRutas.setHasFixedSize(true);
+        rvPlaces.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(context);
-        rvRutas.setLayoutManager(layoutManager);
-        rvRutas.setItemAnimator(new DefaultItemAnimator());
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(rvRutas.getContext(), LinearLayoutManager.VERTICAL);
-        rvRutas.addItemDecoration(dividerItemDecoration);
+        rvPlaces.setLayoutManager(layoutManager);
+        rvPlaces.setItemAnimator(new DefaultItemAnimator());
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(rvPlaces.getContext(), LinearLayoutManager.VERTICAL);
+        rvPlaces.addItemDecoration(dividerItemDecoration);
 
 
         edLugar.addTextChangedListener(new TextWatcher() {
@@ -150,6 +152,25 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
             }
         });
 
+
+        rvPlaces.addOnItemTouchListener(new RecyclerItemClickListener(context, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void OnItemClick(View view, int position) {
+                Places places = placesList.get(position);
+
+                int id = places.getId() ;
+                String name = places.getName();
+
+                Intent intent = new Intent(context, DetalleLugar.class);
+                intent.putExtra(DetalleLugar.ID, id);
+                intent.putExtra(DetalleLugar.NAME, name);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+            }
+        }));
+
+
         dialog.show();
     }
 
@@ -165,7 +186,7 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
 
                     if (count > 0){
                         adapter = new PlaceListAdapter(context, placesList);
-                        rvRutas.setAdapter(adapter);
+                        rvPlaces.setAdapter(adapter);
                     }else  {
 
                     }

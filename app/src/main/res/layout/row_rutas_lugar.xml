@@ -49,6 +49,7 @@
             android:layout_marginTop="5dp"
             android:textSize="14sp"
             android:text="Canaima,Comuneros"
+            android:visibility="gone"
             android:textColor="@color/md_white_1000"/>
 
     </RelativeLayout>

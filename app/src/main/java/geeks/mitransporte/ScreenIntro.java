@@ -69,6 +69,7 @@ public class ScreenIntro extends AppCompatActivity {
                     viewPager.setCurrentItem(mCurrentPage + 1);
                 }else if (txtButton.equals("Finalizar")){
                     startActivity(new Intent(ScreenIntro.this, MainActivity.class));
+                    finish();
                     editor.putString(UsuarioPreferences.KEY_SESSION, "SessionSuccess") ;
                     editor.putInt(UsuarioPreferences.KEY_NUMBER, 1);
                     editor.commit();
@@ -92,6 +93,7 @@ public class ScreenIntro extends AppCompatActivity {
 
         if (session.equals("SessionSuccess") && number == 1){
             startActivity(new Intent(context, SplashScreen.class));
+            finish();
         }else {
 
         }
