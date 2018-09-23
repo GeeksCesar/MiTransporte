@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
     View view ;
     Context context ;
     RelativeLayout lnBuscarSitios, tvBuscarSitios ;
+    RecyclerView reciclerInfoCiudad;
 
     AppBarLayout barLayout;
 
@@ -59,6 +61,7 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
 
         lnBuscarSitios = view.findViewById(R.id.lnBuscarSitiosToolbar);
         tvBuscarSitios = view.findViewById(R.id.tvBuscarSitios);
+        reciclerInfoCiudad = view.findViewById(R.id.reciclerInfoCiudad);
         barLayout = view.findViewById(R.id.appBar);
 
         barLayout.addOnOffsetChangedListener(this);

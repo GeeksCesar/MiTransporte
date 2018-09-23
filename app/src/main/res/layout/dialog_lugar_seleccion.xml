@@ -6,12 +6,11 @@
 
     <TextView
         android:id="@+id/tvCerrarDialoag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="X"
-        android:textColor="@color/princiaplGreen"
+        android:background="@drawable/ic_close_green_24dp"
         android:textSize="@dimen/size_x" />
 
     <EditText
