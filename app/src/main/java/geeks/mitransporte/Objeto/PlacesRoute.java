@@ -1,0 +1,19 @@
+package geeks.mitransporte.Objeto;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class PlacesRoute {
+
+    @SerializedName("name")
+    @Expose
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
