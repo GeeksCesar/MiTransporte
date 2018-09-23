@@ -21,10 +21,10 @@ public class SliderAdapter extends PagerAdapter {
 
     //ArrayImg
     public int[] slide_image = {
-            R.drawable.splash1,
-            R.drawable.splash2,
-            R.drawable.splash3,
-            R.drawable.splash4
+            R.drawable.splash_1,
+            R.drawable.splash_2,
+            R.drawable.splash_3,
+            R.drawable.splash_4
     };
 
     @Override

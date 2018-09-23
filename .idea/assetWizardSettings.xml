@@ -4,26 +4,61 @@
     <option name="children">
       <map>
         <entry key="imageWizard">
+<<<<<<< HEAD
           <value>
             <PersistentState />
           </value>
         </entry>
         <entry key="vectorWizard">
+=======
+>>>>>>> 09d89343a869183e4b6a374ca88f1581f6518513
           <value>
             <PersistentState>
               <option name="children">
                 <map>
-                  <entry key="vectorAssetStep">
+                  <entry key="imageAssetPanel">
                     <value>
                       <PersistentState>
                         <option name="children">
                           <map>
-                            <entry key="clipartAsset">
+                            <entry key="launcher">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="108" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="60" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
+<<<<<<< HEAD
                                       <entry key="url" value="jar:file:/C:/Program%20Files/Android/AndroidStudio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_black_24dp.xml" />
+=======
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="f0f0f0" />
+                                      <entry key="foregroundImage" value="C:\Users\CesarLiizcano\Downloads\icon.png" />
+>>>>>>> 09d89343a869183e4b6a374ca88f1581f6518513
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -31,6 +66,7 @@
                             </entry>
                           </map>
                         </option>
+<<<<<<< HEAD
                         <option name="values">
                           <map>
                             <entry key="color" value="ffffff" />
@@ -38,6 +74,8 @@
                             <entry key="sourceFile" value="C:\Users\diego" />
                           </map>
                         </option>
+=======
+>>>>>>> 09d89343a869183e4b6a374ca88f1581f6518513
                       </PersistentState>
                     </value>
                   </entry>

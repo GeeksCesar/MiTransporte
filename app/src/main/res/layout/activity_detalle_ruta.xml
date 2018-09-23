@@ -22,12 +22,12 @@
                 android:layout_height="250dp" />
 
             <RatingBar
-                android:id="@+id/ratingBarImg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="2.0"
-                android:stepSize="1.0" />
+            android:id="@+id/ratingBarImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="2.0"
+            android:stepSize="1.0" />
 
 
 
