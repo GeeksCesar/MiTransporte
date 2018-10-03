@@ -23,4 +23,6 @@ public interface ApiService {
     @GET("api/get_route_location")
     Call<List<RouteAll>> getRutasLugar(@Query("lugar") int id);
 
+    @GET("api/get_locations")
+    Call<List<Places>> getPlacesRoute(@Query("ruta") int id) ;
 }

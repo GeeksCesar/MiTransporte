@@ -179,7 +179,7 @@ public class Inicio extends Fragment implements AppBarLayout.OnOffsetChangedList
                 Intent intent = new Intent(context, DetalleLugar.class);
                 intent.putExtra(DetalleLugar.ID, id);
                 intent.putExtra(DetalleLugar.NAME, name);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+              //  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 
             }

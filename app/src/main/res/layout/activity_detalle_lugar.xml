@@ -17,6 +17,8 @@
         android:id="@+id/ivLugar"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_1"
         android:layout_below="@+id/toolbar"/>
 
     <android.support.v7.widget.RecyclerView

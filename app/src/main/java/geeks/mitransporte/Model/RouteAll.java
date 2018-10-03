@@ -7,7 +7,7 @@ public class RouteAll {
 
     @SerializedName("route_id")
     @Expose
-    private String routeId;
+    private int routeId;
     @SerializedName("route_number")
     @Expose
     private String routeNumber;
@@ -17,11 +17,11 @@ public class RouteAll {
     private List<PlacesRoute> placesRouteList = null; */
 
 
-    public String getRouteId() {
+    public int getRouteId() {
         return routeId;
     }
 
-    public void setRouteId(String routeId) {
+    public void setRouteId(int routeId) {
         this.routeId = routeId;
     }
 

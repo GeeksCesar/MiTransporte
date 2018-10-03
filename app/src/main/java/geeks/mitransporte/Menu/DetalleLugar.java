@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import geeks.mitransporte.Contoller.RouteListAdapter;
 import geeks.mitransporte.Model.RouteAll;
 import geeks.mitransporte.Objeto.LugarDetalle;
 import geeks.mitransporte.R;
+import geeks.mitransporte.Utils.RecyclerItemClickListener;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -45,6 +47,7 @@ public class DetalleLugar extends AppCompatActivity {
     List<RouteAll> routeList;
     RouteListAdapter adapter ;
 
+    int id_lugar ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +57,10 @@ public class DetalleLugar extends AppCompatActivity {
         apiService = Service.getApiService();
         bundle = getIntent().getExtras();
 
-        int id = bundle.getInt(ID);
+        id_lugar = bundle.getInt(ID);
         String name = bundle.getString(NAME);
 
-        Log.d(Service.TAG, "id-lugar: "+id);
+        Log.d(Service.TAG, "id_lugar: "+id_lugar);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -76,27 +79,42 @@ public class DetalleLugar extends AppCompatActivity {
         rvRutas.addItemDecoration(dividerItemDecoration);
 
 
-        apiService.getDetalleLugar(id).enqueue(new Callback<LugarDetalle>() {
+        getInfoLugar(id_lugar);
+        dataRoute(id_lugar);
+
+
+        rvRutas.addOnItemTouchListener(new RecyclerItemClickListener(DetalleLugar.this, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void OnItemClick(View view, int position) {
+
+                RouteAll route = routeList.get(position);
+
+                int id = route.getRouteId();
+                Toast.makeText(DetalleLugar.this, "Id: "+id, Toast.LENGTH_SHORT).show();
+            }
+        }));
+
+
+    }
+
+    private void getInfoLugar(int id_lugar) {
+        apiService.getDetalleLugar(id_lugar).enqueue(new Callback<LugarDetalle>() {
             @Override
             public void onResponse(Call<LugarDetalle> call, Response<LugarDetalle> response) {
-                Toast.makeText(DetalleLugar.this, "Entro", Toast.LENGTH_SHORT).show();
+
                 Log.d(Service.TAG, "response "+response);
                 if (response.isSuccessful()) {
-                    int id = response.body().getId();
                     String name = response.body().getImagen();
-
                     Glide.with(DetalleLugar.this).load(name).into(imageLugar);
-                    dataRoute(id);
                 }
 
             }
 
             @Override
             public void onFailure(Call<LugarDetalle> call, Throwable t) {
-
+                Log.d(Service.TAG, "response "+t.getMessage());
             }
         });
-
     }
 
     private void dataRoute(int id){
@@ -116,7 +134,7 @@ public class DetalleLugar extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<RouteAll>> call, Throwable t) {
-
+                Log.d(Service.TAG, "response "+t.getMessage());
             }
         });
 
